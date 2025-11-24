@@ -1,0 +1,31 @@
+{
+  "header": "TEST",
+  "authors": [
+    "Lymm"
+  ],
+  "date": "2025-02-20",
+  "content": "#TEST 2025-02-20 # Dotfiles\n> *Dotfiles for dargfox environment*\n\n![preview][preview]\n\n## Requirements\n> Please, read how to clone[^clone] before you do anything, project has submodules[^modules]\n### Packages\n - stow\n - neovim\n - tmux\n - lazygit\n - powerline (optional)\n\n **Stow** is used for sync of dotfiles. Read more how to use stow for correct environment setup.\n\n **Neovim** is used as a main code editor. Configured with bamboo theme. LSP configured for JS, Python, Lua, Bash, Vue.Treesitter is used for beautiful highlights. Added floaterm and LazyGit for easy git operating. That's main features, try all of it by yourself.\n\n**Tmux** is used for easy operating in terminal. With current .bashrc it opens on bash start. Added theme, that has a lot of useful information in your terminal.\n\n**LazyGit** - if you are going to use NeoVim as main code editor - **please** setup it, it will make your life easier and brighter.\n\n## Setup\n **Setup environment using stow**\n\n[preview]:",
+  "images": [
+    {"src": "https://i.imgur.com/i3DGIR2_d.webp?maxwidth=520&shape=thumb&fidelity=high"},
+    {"src": "https://i.imgur.com/i3DGIR2_d.webp?maxwidth=520&shape=thumb&fidelity=high"},
+    {"src": "https://i.imgur.com/i3DGIR2_d.webp?maxwidth=520&shape=thumb&fidelity=high"},
+    {"src": "https://i.imgur.com/i3DGIR2_d.webp?maxwidth=520&shape=thumb&fidelity=high"},
+    {"src": "https://i.imgur.com/i3DGIR2_d.webp?maxwidth=520&shape=thumb&fidelity=high"},
+    {"src": "https://i.imgur.com/i3DGIR2_d.webp?maxwidth=520&shape=thumb&fidelity=high"},
+    {"src": "https://i.imgur.com/i3DGIR2_d.webp?maxwidth=520&shape=thumb&fidelity=high"},
+    {"src": "https://i.imgur.com/i3DGIR2_d.webp?maxwidth=520&shape=thumb&fidelity=high"},
+    {"src": "https://i.imgur.com/i3DGIR2_d.webp?maxwidth=520&shape=thumb&fidelity=high"},
+    {"src": "https://i.imgur.com/i3DGIR2_d.webp?maxwidth=520&shape=thumb&fidelity=high"},
+    {"src": "https://i.imgur.com/i3DGIR2_d.webp?maxwidth=520&shape=thumb&fidelity=high"},
+    {"src": "https://i.imgur.com/i3DGIR2_d.webp?maxwidth=520&shape=thumb&fidelity=high"},
+    {"src": "https://i.imgur.com/i3DGIR2_d.webp?maxwidth=520&shape=thumb&fidelity=high"},
+    {"src": "https://i.imgur.com/i3DGIR2_d.webp?maxwidth=520&shape=thumb&fidelity=high"},
+    {"src": "https://i.imgur.com/i3DGIR2_d.webp?maxwidth=520&shape=thumb&fidelity=high"},
+    {"src": "https://i.imgur.com/i3DGIR2_d.webp?maxwidth=520&shape=thumb&fidelity=high"},
+    {"src": "https://i.imgur.com/i3DGIR2_d.webp?maxwidth=520&shape=thumb&fidelity=high"},
+    {"src": "https://i.imgur.com/i3DGIR2_d.webp?maxwidth=520&shape=thumb&fidelity=high"},
+    {"src": "https://i.imgur.com/i3DGIR2_d.webp?maxwidth=520&shape=thumb&fidelity=high"},
+    {"src": "https://i.imgur.com/i3DGIR2_d.webp?maxwidth=520&shape=thumb&fidelity=high"},
+    {"src": "https://i.imgur.com/i3DGIR2_d.webp?maxwidth=520&shape=thumb&fidelity=high"}
+  ]
+}
