@@ -14,10 +14,12 @@ import {storeToRefs} from 'pinia';
 import {computed} from 'vue';
 import {RouterView} from 'vue-router';
 
-const { backgroundIndex } = storeToRefs(useGlobalStore());
+const { currentBackgroundURL, nextBackgroundURL } = storeToRefs(useGlobalStore());
 
 const isDark = useDark();
-const backgroundURL = computed(() => `url('/img/background${backgroundIndex.value}.png')`);
+const backgroundURL = computed(() => `url('${currentBackgroundURL.value}')`);
+// Little hack to avoid flickering of background image
+const nextBackgroundURL_ = computed(() => `url('${nextBackgroundURL.value}')`);
 
 </script>
 <style lang="scss" scoped>
@@ -37,6 +39,17 @@ const backgroundURL = computed(() => `url('/img/background${backgroundIndex.valu
 
   background: v-bind(backgroundURL);
   transition: ease-in-out grid-template-columns var(--transition-time) var(--transition-time);
+
+  // Little hack to avoid flickering of background image
+  &:after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: v-bind(nextBackgroundURL_);
+    opacity: 0;
+    pointer-events: none;
+  }
 
   .header {
     grid-area: header;
