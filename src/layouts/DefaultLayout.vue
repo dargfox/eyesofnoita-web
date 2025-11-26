@@ -81,7 +81,7 @@ const nextBackgroundURL_ = computed(() => `url('${nextBackgroundURL.value}')`);
         animation: fade-sidebar-close .3s linear forwards;
       }
       .divider {
-        display: none;
+        height: 1px;
       }
 
       .name {

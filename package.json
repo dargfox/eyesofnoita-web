@@ -21,7 +21,11 @@
     "@crazydos/vue-markdown": "^1.1.4",
     "@vueuse/core": "^14.0.0",
     "custom-vue-scrollbar": "^0.0.8",
+    "easymde": "^2.20.0",
+    "mammoth": "^1.11.0",
+    "md-editor-v3": "^6.2.0",
     "pinia": "^3.0.3",
+    "turndown": "^7.2.2",
     "vue": "^3.5.22",
     "vue-router": "^4.6.3"
   },

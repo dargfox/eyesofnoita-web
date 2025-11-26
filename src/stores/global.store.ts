@@ -1,18 +1,21 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
-import type {ISidebarItem} from '@/utils/types';
+import type {ISidebarItem, ISidebarItemWithExtra} from '@/utils/types';
 
 export const useGlobalStore = defineStore('global', () => {
   const MAX_BACKGROUND_INDEX = 9;
 
-  const sidebarItems = ref<ISidebarItem[]>([
-    {name: 'About Eyes', icon: 'material-symbols:data-info-alert', to: '/'},
-    {name: 'Messages', icon: 'material-symbols:data-info-alert', to: '/'},
-    {name: 'Timeline', icon: 'material-symbols:data-info-alert', to: '/'},
-    {name: 'Isomorphs Tool', icon: 'material-symbols:data-info-alert', to: '/'},
-    {name: 'Frequency Tool', icon: 'material-symbols:data-info-alert', to: '/'},
-    {name: 'Create Timeline Record', icon: 'material-symbols:data-info-alert', to: '/'},
-    {name: 'Contacts', icon: 'material-symbols:data-info-alert', to: '/'},
+  const sidebarItems = ref<ISidebarItemWithExtra[]>([
+    {type: 'item', name: 'About Eyes', icon: 'material-symbols:indeterminate-question-box', to: '/'},
+    {type: 'item', name: 'Messages', icon: 'material-symbols:inbox-text-asterisk-outline', to: '/'},
+    {type: 'item', name: 'Timeline', icon: 'material-symbols:view-timeline-outline', to: '/'},
+    {type: 'item', name: 'Create Timeline Record', icon: 'material-symbols:edit-document-outline', to: '/create'},
+    {type: 'item', name: 'Contacts', icon: 'material-symbols:share', to: '/'},
+    {type: 'divider'},
+    {type: 'item', name: 'Isomorphs Tool', icon: 'material-symbols:vpn-key-outline', to: '/'},
+    {type: 'item', name: 'Frequency Tool', icon: 'material-symbols:vpn-key-outline', to: '/'},
+    {type: 'spacer'},
+    {type: 'divider'},
   ]);
 
   const backgroundsList = computed<string[]>(() => (

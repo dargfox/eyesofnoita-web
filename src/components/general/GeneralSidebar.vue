@@ -2,7 +2,9 @@
   <div class="sidebar">
     <div class="container">
       <template v-for="item, key of items">
-        <RouterLink :key="key + 'l'" v-if="item.to" :to="item.to">
+        <span :key="key + 'd'" v-if="item.type === 'divider'"  class="divider"></span>
+        <span :key="key + 's'" v-else-if="item.type === 'spacer'"  class="spacer"></span>
+        <RouterLink :key="key + 'l'" v-else-if="item.to" :to="item.to">
           <Icon :icon="item.icon" />
           <span class="name">{{ item.name }}</span>
         </RouterLink>
@@ -11,22 +13,20 @@
           <span class="name">{{ item.name }}</span>
         </GeneralButton>
       </template>
-      <span class="divider"></span>
-      <span class="spacer"></span>
       <SwitchBackground class="switch-background" />
       <ToggleDarkTheme class="dark-theme-toggle" />
     </div>
   </div>
 </template>
 <script setup lang="ts">
-import type {ISidebarItem} from '@/utils/types';
+import type {ISidebarItemWithExtra} from '@/utils/types';
 import ToggleDarkTheme from '../utils/ToggleDarkTheme.vue';
 import GeneralButton from './GeneralButton.vue';
 import {Icon} from '@iconify/vue';
 import SwitchBackground from '../utils/SwitchBackground.vue';
 
 interface IProps {
-  items: ISidebarItem[];
+  items: ISidebarItemWithExtra[];
 }
 
 defineProps<IProps>();
